@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core System Colors */
+    --color-background: #010101; /* black - infinite space canvas */
+    --color-foreground: #F5F5F5; /* off-white - clear readability */
+    --color-border: #5f6670; /* muted grey - gentle boundaries */
+    --color-input: #2d2d2f; /* charcoal - subtle surface elevation */
+    --color-ring: #a3fff5; /* cyan - focus indicator */
+    
+    /* Card System */
+    --color-card: #2d2d2f; /* charcoal - content containers */
+    --color-card-foreground: #F5F5F5; /* off-white - card text */
+    --color-popover: #2d2d2f; /* charcoal - overlay surfaces */
+    --color-popover-foreground: #F5F5F5; /* off-white - overlay text */
+    
+    /* Content Hierarchy */
+    --color-muted: #5f6670; /* muted grey - secondary elements */
+    --color-muted-foreground: #a3fff5; /* cyan - secondary text */
+    
+    /* Brand Colors */
+    --color-primary: #a3fff5; /* cyan - interactive moments */
+    --color-primary-foreground: #010101; /* black - contrast text */
+    --color-secondary: #154367; /* celestial blue - section transitions */
+    --color-secondary-foreground: #F5F5F5; /* off-white - secondary text */
+    
+    /* Action Colors */
+    --color-destructive: #ef4444; /* red-500 - error indication */
+    --color-destructive-foreground: #FFFFFF; /* white - error text */
+    --color-accent: #a3fff5; /* cyan - accent highlights */
+    --color-accent-foreground: #010101; /* black - accent text */
+    
+    /* Status Colors */
+    --color-success: #4ade80; /* green-400 - achievement confirmation */
+    --color-success-foreground: #010101; /* black - success text */
+    --color-warning: #fbbf24; /* amber-400 - attention without alarm */
+    --color-warning-foreground: #010101; /* black - warning text */
+    --color-error: #ef4444; /* red-500 - clear problem indication */
+    --color-error-foreground: #FFFFFF; /* white - error text */
+    
+    /* Surface Elevation */
+    --color-surface: #5f6670; /* muted grey - content separation */
+    --color-surface-foreground: #F5F5F5; /* off-white - surface text */
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Typography System */
+  .font-headline {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+  }
+
+  .font-body {
+    font-family: 'Source Sans 3', sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* Animation Performance */
+  .will-change-transform {
+    will-change: transform;
+  }
+
+  .will-change-opacity {
+    will-change: opacity;
+  }
+
+  /* Cosmic Theme Utilities */
+  .cosmic-glow {
+    box-shadow: 0 0 10px rgba(163, 255, 245, 0.3);
+  }
+
+  .cosmic-shadow {
+    box-shadow: 0 4px 20px rgba(163, 255, 245, 0.1);
+  }
+
+  .cosmic-border {
+    border: 1px solid var(--color-border);
+  }
+
+  /* Smooth Transitions */
+  .transition-cosmic {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Reduced Motion Support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
