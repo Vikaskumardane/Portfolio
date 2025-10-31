@@ -1,5 +1,4 @@
 # React
-
 A modern React-based project utilizing the latest frontend technologies and tools for building responsive web applications.
 
 ## 🚀 Features
@@ -48,8 +47,7 @@ react_app/
 │   ├── Routes.jsx      # Application routes
 │   └── index.jsx       # Application entry point
 ├── .env                # Environment variables
-├── index.html          # HTML template
-├── package.json        # Project dependencies and scripts
+├── package.json        # Project dependencies
 ├── tailwind.config.js  # Tailwind CSS configuration
 └── vite.config.js      # Vite configuration
 ```
@@ -65,8 +63,8 @@ import AboutPage from "pages/AboutPage";
 
 const ProjectRoutes = () => {
   let element = useRoutes([
-    { path: "/", element: <HomePage /> },
-    { path: "/about", element: <AboutPage /> },
+    { path: "/", element:  },
+    { path: "/about", element:  },
     // Add more routes as needed
   ]);
 
@@ -89,7 +87,6 @@ This project uses Tailwind CSS for styling. The configuration includes:
 
 The app is built with responsive design using Tailwind CSS breakpoints.
 
-
 ## 📦 Deployment
 
 Build the application for production:
@@ -100,8 +97,5 @@ npm run build
 
 ## 🙏 Acknowledgments
 
-- Built with [Rocket.new](https://rocket.new)
 - Powered by React and Vite
 - Styled with Tailwind CSS
-
-Built with ❤️ on Rocket.new
