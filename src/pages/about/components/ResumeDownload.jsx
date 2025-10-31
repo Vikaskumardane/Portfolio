@@ -13,8 +13,8 @@ const ResumeDownload = () => {
       setIsDownloading(false);
       
       const link = document.createElement('a');
-    link.href = '/Resume(Vikaskumar Dane).pdf'; // path to your PDF in public folder
-    link.download = 'Resume(Vikaskumar Dane).pdf'; // desired filename for download
+    link.href = '/resume(VikaskumarDane).pdf'; // path to your PDF in public folder
+    link.download = 'resume(VikaskumarDane).pdf'; // desired filename for download
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

@@ -18,8 +18,8 @@ const HeroContent = () => {
   const handleViewResume = () => {
     // Mock resume download - in real implementation would link to actual resume
     const link = document.createElement('a');
-    link.href = '#';
-    link.download = 'Vikaskumar_Dane_Resume.pdf';
+    link.href = '/Resume(Vikaskumar_Dane).pdf';
+    link.download = 'Resume(Vikaskumar_Dane).pdf';
     link?.click();
   };
 
