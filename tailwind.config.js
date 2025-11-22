@@ -126,6 +126,11 @@ export default {
             transform: "translateY(5px) rotate(240deg)" 
           },
         },
+        // --- NEW: HUD Scanning Animation ---
+        "scan": {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(100%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -137,6 +142,9 @@ export default {
         "slide-in-from-right": "slide-in-from-right 0.3s ease-out",
         "cosmic-pulse": "cosmic-pulse 2s ease-in-out infinite",
         "particle-float": "particle-float 6s ease-in-out infinite",
+        // --- NEW Animations ---
+        "scan": "scan 3s linear infinite",
+        "spin-slow": "spin 4s linear infinite",
       },
       spacing: {
         '18': '4.5rem',
